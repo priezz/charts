@@ -48,8 +48,8 @@ class MonotoneX {
     List<List<double>> arr = [];
     for (int i = 0; i < targetPoints.length; i++) {
       double t1;
-      double x = targetPoints[i].x;
-      double y = targetPoints[i].y;
+      double x = targetPoints[i].x.toDouble();
+      double y = targetPoints[i].y.toDouble();
       if (x == x1 && y == y1) continue;
       switch (i) {
         case 0:
