@@ -32,18 +32,19 @@ class LinePainter {
   /// to stroke-dasharray in SVG path elements. An odd number of values in the
   /// pattern will be repeated to derive an even number of values. "1,2,3" is
   /// equivalent to "1,2,3,1,2,3."
-  void draw(
-      {Canvas canvas,
-      Paint paint,
-      List<Point> points,
-      Rectangle<num> clipBounds,
-      common.Color fill,
-      common.Color stroke,
-      bool smoothLine,
-      bool roundEndCaps,
-      double strokeWidthPx,
-      List<int> dashPattern,
-      ui.Shader shader}) {
+  void draw({
+    Canvas canvas,
+    Paint paint,
+    List<Point> points,
+    Rectangle<num> clipBounds,
+    common.Color fill,
+    common.Color stroke,
+    bool smoothLine = false,
+    bool roundEndCaps,
+    double strokeWidthPx,
+    List<int> dashPattern,
+    ui.Shader shader,
+  }) {
     if (points.isEmpty) {
       return;
     }
